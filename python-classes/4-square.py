@@ -3,8 +3,11 @@
 
 
 class Square:
-     """Square represents an instance of a square shape"""
-     def __init__(self, size=0):
+    """ class square defines a square by size:
+    size must be an integer
+    size must not be negative
+    """
+    def __init__(self, size=0):
         """ Initializes the object square
           Args:
             size (int): size of a side of the square
@@ -12,19 +15,20 @@ class Square:
         """
         self.size = size
 
-        def area(self):
-                """calculates the area of a square"""
-                return (self.__size) ** 2
+    def area(self):
+        """calculates the area of a square"""
+        return (self.__size) ** 2
 
-@property
-def size(self):
+    @property
+    def size(self):
         """ gets the value of __size
          Returns:
             The size of the square
-        """
+         """
         return self.__size
-@size.setter
-def size(self, value):
+
+    @size.setter
+    def size(self, value):
         """Sets the value of __size
          value (int): the value of a size of the square
         Returns:
