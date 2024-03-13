@@ -17,17 +17,19 @@ class Square:
         self.position = position
 
     def area(self):
-                """calculates the area of a square"""
-                return (self.__size) ** 2
- @property
+        """calculates the area of a square"""
+        return (self.__size) ** 2
+
+    @property
     def size(self):
         """ gets the value of __size
          Returns:
             The size of the square
         """
-         return self.__size
-@size.setter
-def size(self, value):
+        return self.__size
+
+    @size.setter
+    def size(self, value):
         """ sets the value of __size
          value (int): the value of a size of the square
         Returns:
@@ -40,36 +42,35 @@ def size(self, value):
         else:
             self.__size = value
 
-def my_print(self):
-    '''
+    def my_print(self):
+        """
        Prints graphic representaion of square instance
-    '''
-    if self.size == 0:
-        print("")
-        return
+        """
+        if self.size == 0:
+            print("")
+            return
+        for i in range(self.size):
+            print("\n" * self.position[1], end="")
+            print(" " * self.position[0] + "#" * self.size)
 
-    print("\n" * self.position[1], end="")
-    for i in range(self.size):
-        print(" " * self.position[0] + "#" * self.size)
-
-        @property
-        def position(self):
-            """gets the current position of square instance.
+    @property
+    def position(self):
+        """gets the current position of square instance.
            Returns:The position of the square in 2D space
-           """
-         return self.__position
+        """
+        return self.__position
 
-        @position.setter
-        def position(self, value):
-            """
-               Sets the value for position
+    @position.setter
+    def position(self, value):
+        """
+            Sets the value for position
                Args:
                  value (tuple): The position of the square
-                Returns:None
-            """
-            if type(value) is not tuple or len(value) != 2 or \
-                    type(value[0]) is not int or value[0] < 0 or \
-                    type(value[1]) is not int or value[1] < 0:
-                raise TypeError("position must be a tuple of 2 positive integers")
-            else:
-                self.__position = value
+            Returns: None
+        """
+        if type(value) is not tuple or len(value) != 2 or \
+           type(value[0]) is not int or value[0] < 0 or \
+           type(value[1]) is not int or value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            self.__position = value
