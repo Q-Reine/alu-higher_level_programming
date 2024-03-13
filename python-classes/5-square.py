@@ -8,28 +8,25 @@ class Square:
         """ initializes the object square
           Args:
             size (int): size of a side of the square
-        Returns: None
+        Returns:
+            None
         """
-        if type(size) is not int:
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            self.__size = size
+        self.size = size
 
-      def area(self):
-                """calculates the area of a square"""
-                return (self.__size) ** 2
+    def area(self):
+        """calculates the area of a square"""
+        return (self.__size) ** 2
 
- @property
+    @property
     def size(self):
         """ gets the value of __size
          Returns:
             The size of the square
         """
-         return self.__size
-@size.setter
-def size(self, value):
+        return self.__size
+
+    @size.setter
+    def size(self, value):
         """ sets the value of __size
          value (int): the value of a size of the square
         Returns:
@@ -42,12 +39,12 @@ def size(self, value):
         else:
             self.__size = value
 
-  def my_print(self):
-                """prints the square
+    def my_print(self):
+        """prints the square
                 Returns:
                     None
-                """
-                for i in range(self.size):
-                    print("#" * self.size)
-                if self.size == 0:
-                    print("")
+        """
+        for i in range(self.size):
+            print("#" * self.size)
+        if self.size == 0:
+            print("")
