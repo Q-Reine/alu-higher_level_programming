@@ -4,29 +4,28 @@
 
 class Square:
      """Square represents an instance of a square shape"""
-
-    def __init__(self, size=0):
-        """ initializes the object square
+     def __init__(self, size=0):
+        """ Initializes the object square
           Args:
             size (int): size of a side of the square
         Returns: None
         """
-        self.__size = size
+        self.size = size
 
         def area(self):
                 """calculates the area of a square"""
                 return (self.__size) ** 2
 
- @property
-    def size(self):
+@property
+def size(self):
         """ gets the value of __size
          Returns:
             The size of the square
         """
-         return self.__size
+        return self.__size
 @size.setter
-    def size(self, value):
-        """ sets the value of __size
+def size(self, value):
+        """Sets the value of __size
          value (int): the value of a size of the square
         Returns:
             None
