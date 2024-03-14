@@ -43,7 +43,7 @@ class Square:
 
     def my_print(self):
         """
-       Prints graphic representaion of square instance
+       Prints graphic representation of square instance
         """
         if self.__size == 0:
             print()
