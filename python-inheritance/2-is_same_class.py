@@ -7,4 +7,3 @@ def is_same_class(obj, a_class):
     of the specified class
     """
     return (type(obj) == a_class)
-
