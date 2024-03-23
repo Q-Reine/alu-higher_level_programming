@@ -1,10 +1,13 @@
 #!/usr/bin/python3
 """ Script that fetches https://alu-intranet.hbtn.io/status """
+import urllib.request
 
+url = 'https://intranet.htbn.io/status'
+if url.startswith('https://'):
+    url = "https://alu-intranet.htbn.io/status"
 
-if __name__ == '__main__':
-    import urllib.request
-
+if __name__ == "__main__":
+    request = urllib.request.Request(url)
     with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
         content = response.read()
         print("Body response:")
