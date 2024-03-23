@@ -4,8 +4,11 @@ Script that fetches https://intranet.hbtn.io/status
 """
 import requests
 
+url = 'https://intranet.hbtn.io/status'
+if url.startswith('https://'):
+    url = "https://alu-intranet.hbtn.io/status"
+
 if __name__ == '__main__':
-    url = "https://intranet.hbtn.io/status"
     r = requests.get(url)
     text = r.text
     print("Body response:")
