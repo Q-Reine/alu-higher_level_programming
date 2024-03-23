@@ -2,7 +2,7 @@
 """ Script that fetches https://alu-intranet.hbtn.io/status """
 import urllib.request
 with urllib.request.urlopen('https://alu-intranet.hbtn.io/status') as response:
-    r = response.read().decode('utf-8')
+    r = response.read().decode('UTF-8')
 
  print('Body response:')
  print('\t- type: {}'.format(type(r))
