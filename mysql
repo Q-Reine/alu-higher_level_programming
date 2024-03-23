@@ -1,0 +1,2 @@
+mysql start
+sudo mysql -u root -p
