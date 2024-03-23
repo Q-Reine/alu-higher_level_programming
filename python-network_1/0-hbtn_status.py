@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Script that fetches https://alu-intranet.hbtn.io/status"""
+""" Script that fetches https://alu-intranet.hbtn.io/status """
 
 
 import urllib.request
@@ -10,4 +10,4 @@ if __name__ == "__main__":
         print("Body response:")
         print("\t- type: {}".format(type(r)))
         print("\t- content: {}".format(r))
-        print("\t- utf8 content: {}".format(r.decode("UTF-8"))
+        print("\t- utf8 content: {}".format(r.decode("UTF-8")))
